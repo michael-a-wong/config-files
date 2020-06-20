@@ -50,6 +50,10 @@ Plug 'preservim/nerdtree', {'on': 'NERDTreeToggle'}
 
 Plug 'itchyny/lightline.vim'
 
+Plug 'frazrepo/vim-rainbow'
+
+Plug 'airblade/vim-gitgutter'
+
 " Could not figure out with linter to use for C/C++
 " Plug 'vim-syntastic/syntastic'
 
@@ -61,3 +65,18 @@ let mapleader = ","
 
 "Shortcut for nerdtree
 map <leader>nt :NERDTreeToggle<cr>
+
+let g:rainbow_active = 1
+
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
+
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+
+set updatetime=100
+
