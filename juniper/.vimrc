@@ -43,6 +43,12 @@ endif
 " Plugin Manager: vim-plug
 " https://github.com/junegunn/vim-plug
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Plugins will be downloaded under the specified directory.
 silent!call plug#begin('~/.vim/plugged')
 
