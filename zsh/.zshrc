@@ -22,6 +22,7 @@ alias l='ls -lrtG'
 alias ls='ls -G'
 alias grep="grep --color=auto"  # color grep - highlight desired sequence.
 alias h='hostname'
+alias g=git
 
 # Expand the history size
 export HISTFILESIZE=10000
@@ -31,52 +32,12 @@ export HISTSIZE=500
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 
 # Causes bash to append to history instead of overwriting it so if you start a new terminal, you have old session history
-shopt -s histappend
+# shopt -s histappend
 PROMPT_COMMAND='history -a'
 
 
 # cd into the old directory
 alias cdBack='cd "$OLDPWD"'
-
-## Juniper related ###
-
-alias image='cd packages/ptx/ptx-chassis/image/obj-native64/install/ptx/; cd packages/ptx/ptx-chassis/image/obj-re-64b/install/ptx/dbg'
-
-#alias POD
-alias cdvmm='cd /vmm/data/user_disks/wongm'
-alias sv8='ssh sv8-pod2-vmm'
-alias pod2='ssh -t sv8-pod2-vmm "cd /vmm/data/user_disks/wongm/pod2; bash"'
-alias pod3='ssh -t sv8-pod3-vmm "cd /vmm/data/user_disks/wongm/pod3; bash"'
-alias pod4='ssh -t sv8-pod4-vmm "cd /vmm/data/user_disks/wongm/pod4; bash"'
-alias pod13='ssh q-pod13-vmm'
-alias pod5='ssh -t q-pod05-vmm "cd /vmm/data/user_disks/wongm/pod05; bash"'
-alias pod8='ssh -t q-pod08-vmm "cd /vmm/data/user_disks/wongm/pod08; bash"'
-alias tt='ssh ttsv-shell101'
-
-
-alias cdTmp='ssh -t sv8-pod2-vmm "cd tmp; bash"'
-
-alias cdImageDbg='cd packages/ptx/ptx-chassis/image/obj-native64/install/ptx/; cd packages/ptx/ptx-chassis/image/obj-re-64b/install/ptx/dbg'
-alias cdImage='cd packages/ptx/ptx-chassis/image/obj-re-64b/install/ptx/'
-alias sbScapa='baas build -b "sb make DEFAULT_COMPONENTS=ptx-chassis-image DEBUG=0" -x'
-alias sbScapaDbg='baas build -b "sb make DEFAULT_COMPONENTS=ptx-chassis-image" -x'
-
-
-scpTmp() {
-   scp $1 sv8-pod2-vmm:~/tmp
-}
-scpPtx() {
-   scp ptx.iso root@$1:/var/tmp
-}
-scpPtxDbg() {
-   scp ptx-dbg.iso root@$1:/var/tmp
-}
-scpPtxFixed() {
-   scp ptx-fixed.iso root@$1:/var/tmp
-}
-scpPtxFixedDbg() {
-   scp ptx-fixed-dbg.iso root@$1:/var/tmp
-}
 
 # Copy file with a progress bar
 cpl()
@@ -121,11 +82,5 @@ extract () {
                 fi
         done
 }
-
-
-
-
-
-
 
 
