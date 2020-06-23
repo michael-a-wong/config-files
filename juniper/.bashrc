@@ -30,6 +30,16 @@ PROMPT_COMMAND='history -a'
 # cd into the old directory
 alias cdBack='cd "$OLDPWD"'
 
+# git config --global alias.s status
+# git config --global alias.d diff
+# git config --global alias.co checkout
+# git config --global alias.br branch
+# git config --global alias.last "log -1 HEAD"
+# git config --global alias.cane "commit --amend --no-edit"
+# git config --global alias.pr "pull --rebase"
+# git config --global alias.lo "log --oneline -n 10"
+alias g='git'
+
 ## Juniper related ###
 
 alias image='cd packages/ptx/ptx-chassis/image/obj-native64/install/ptx/; cd packages/ptx/ptx-chassis/image/obj-re-64b/install/ptx/dbg'
