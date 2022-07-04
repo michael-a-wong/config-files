@@ -8,6 +8,8 @@
 
 #  run  configs  #
 
+unset zle_bracketed_paste
+
 alias vi='vim'
 
 alias c8='cd ../../../../../../../../'
@@ -35,9 +37,6 @@ export HISTCONTROL=erasedups:ignoredups:ignorespace
 # shopt -s histappend
 PROMPT_COMMAND='history -a'
 
-
-# cd into the old directory
-alias cdBack='cd "$OLDPWD"'
 
 # Copy file with a progress bar
 cpl()
