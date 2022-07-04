@@ -18,7 +18,6 @@ set ignorecase
 set smartcase
 set cursorline
 set noerrorbells
-set visualbell
 set number
 set laststatus=2
 set noshowmode
