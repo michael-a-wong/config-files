@@ -25,6 +25,14 @@ alias ls='ls -G'
 alias grep="grep --color=auto"  # color grep - highlight desired sequence.
 alias h='hostname'
 alias g=git
+# git config --global alias.s status
+# git config --global alias.d diff
+# git config --global alias.co checkout
+# git config --global alias.br branch
+# git config --global alias.last "log -1 HEAD"
+# git config --global alias.cane "commit --amend --no-edit"
+# git config --global alias.pr "pull --rebase"
+# git config --global alias.lo "log --oneline -n 10"
 
 # Expand the history size
 export HISTFILESIZE=10000
