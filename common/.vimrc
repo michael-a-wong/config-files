@@ -21,6 +21,7 @@ set noerrorbells
 set number
 set laststatus=2
 set noshowmode
+set shiftwidth=4
 
 "show tabs as <---"
 set list
